@@ -88,7 +88,7 @@ function loginUser(req, res) {
             res.json({
                 "message": "User has been loggedin"
             });
-        });    
+       
 }
 
 

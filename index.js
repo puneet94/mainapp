@@ -62,6 +62,7 @@ app.get('*', function (req, res) {
 
 server.listen(app.get('port'), function () {
   console.log("listeing on server");
+  console.log(app.get("port"))
 });
 
 
