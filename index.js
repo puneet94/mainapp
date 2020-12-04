@@ -8,6 +8,7 @@ var bodyParser = require('body-parser');
 var compression = require('compression');
 var cors = require('cors');
 
+var userRouter = require('./routes/user');
 require('dotenv').config();
 
 require('dotenv').config();
@@ -37,7 +38,7 @@ app.use(compression());
 app.set('port', process.env.PORT || 3000);
 app.set("view engine", "ejs");
 
-
+app.use('/user', userRouter);
 
 app.use(express.static(__dirname + '/public'));
 
